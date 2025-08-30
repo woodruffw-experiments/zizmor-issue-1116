@@ -1,0 +1,15 @@
+name: example
+on:
+  issues:
+
+permissions: {}
+
+jobs:
+  inject-me:
+    name: inject-me
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Print the current ref"
+        run: |
+          echo "The current ref is: ${{ github.ref }}"
